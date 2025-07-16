@@ -3,3 +3,6 @@ We build a Producer and a Consumer that communicate through RabbitMQ in NestJs. 
 The "producer" project exposes 2 APIs, which will send messages to rabbitMQ (either emit an event, or send a message and wait for a reply).
 
 The "consumer" project is a microservice application that is connected to the same rabbitMQ server. It consumes messages from the "orders-queue" queue, and handles them based on their pattern.
+
+# latest RabbitMQ 4.x
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management
